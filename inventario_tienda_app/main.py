@@ -1,7 +1,7 @@
 from servicios.inventario import Inventario
 from modelos.producto import Producto
 
-def mostrar_menu(): #Mestra el menú principal del sistema.
+def mostrar_menu(): #Muestra el menú principal del sistema.
     print("\n" + "="*50)
     print("SISTEMA DE GESTIÓN DE INVENTARIOS")
     print("="*50)
@@ -82,7 +82,6 @@ def actualizar_producto_interactivo(inventario: Inventario): #Interfaz interacti
         print("El inventario está vacío. No hay productos para actualizar.")
         return
     id_producto = obtener_entero("Ingrese el ID del producto a actualizar: ")
-    
     # Verificar si el producto existe
     producto = inventario.obtener_producto_por_id(id_producto)
     if producto is None:
@@ -173,7 +172,6 @@ def main(): # Función principal del programa. Controla el flujo del menú y las
                 break
             else:
                 print("Error: Opción no válida. Por favor seleccione una opción entre 1 y 7.")
-        
         except KeyboardInterrupt:
             print("\n\nOperación interrumpida por el usuario.")
             break
